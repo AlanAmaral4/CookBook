@@ -21,7 +21,6 @@ formularioReceita.addEventListener("submit", async (evento) => {
 
     if (id) {
         await api.alterarReceita({ id, titulo, tipo, nota, ingredientes, preparo })
-        console.log("Alterar Receita")
     } else {
         await api.cadastrarReceita({ titulo, tipo, nota, ingredientes, preparo })
     }
