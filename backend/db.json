@@ -1,0 +1,156 @@
+{
+  "receitas": [
+    {
+      "id": "1",
+      "titulo": "Pizza Marguerita",
+      "tipo": "Italiana",
+      "ingredientes": "Tudo que há de bom",
+      "preparo": "Mistura tudo e taca no forno",
+      "nota": "5",
+      "favorito": true
+    },
+    {
+      "id": "2",
+      "titulo": "Feijoada Completa",
+      "tipo": "Brasileira",
+      "ingredientes": "1kg de feijão preto, 500g de carne seca, 300g de costelinha de porco, 2 linguiças calabresas, Louro, Alho e cebola picados",
+      "preparo": "Deixe as carnes salgadas de molho por 12h. Cozinhe o feijão com as folhas de louro. Em outra panela, refogue as carnes. Junte tudo e deixe apurar o caldo até engrossar.",
+      "nota": "5",
+      "favorito": true
+    },
+    {
+      "id": "3",
+      "titulo": "Hambúrguer Artesanal",
+      "tipo": "Americana",
+      "nota": "5",
+      "ingredientes": "500g de acém moído, 100g de bacon moído, Queijo cheddar fatiado, Pão de brioche, Maionese verde, Alface e tomate",
+      "preparo": "Misture as carnes e molde discos de 180g. Tempere com sal e pimenta apenas na hora de grelhar. Sele o pão na manteiga. Monte com o queijo derretido, salada e maionese.",
+      "favorito": false
+    },
+    {
+      "id": "4",
+      "titulo": "Yakisoba Clássico",
+      "tipo": "Japonesa",
+      "ingredientes": "300g de macarrão para yakisoba, 200g de tiras de carne e frango, Acelga picada, Cenoura em rodelas, Brócolis, Molho shoyu, Óleo de gergelim",
+      "preparo": "Cozinhe o macarrão e reserve. Em uma wok ou frigideira grande, sele as carnes. Adicione os legumes duros (cenoura e brócolis) e depois a acelga. Junte o macarrão e o molho shoyu.",
+      "nota": "5",
+      "favorito": false
+    },
+    {
+      "id": "5",
+      "titulo": "Petit Gâteau",
+      "tipo": "Francesa",
+      "ingredientes": "200g de chocolate meio amargo, 2 colheres de manteiga sem sal, 1/4 xícara de açúcar, 2 colheres de farinha de trigo, 2 ovos inteiros, 2 gemas",
+      "preparo": "Derreta o chocolate com a manteiga. Bata os ovos com o açúcar até clarear. Misture tudo delicadamente e adicione a farinha. Asse em forminhas untadas em forno máximo por 7 minutos exatos (o centro deve ficar mole).",
+      "nota": "5",
+      "favorito": true
+    },
+    {
+      "id": "6",
+      "titulo": "Macarrão Carbonara",
+      "tipo": "Italiana",
+      "ingredientes": "500g de espaguete, 200g de guanciale ou bacon, 4 gemas de ovo, 100g de queijo pecorino ou parmesão, Pimenta do reino moída na hora",
+      "preparo": "Frite o bacon até soltar a gordura. Em uma tigela, misture as gemas com o queijo e muita pimenta. Cozinhe a massa. Desligue o fogo do bacon, jogue a massa quente e a mistura de ovos. Mexa rápido para criar o creme sem cozinhar o ovo.",
+      "nota": "4",
+      "favorito": false
+    },
+    {
+      "id": "7",
+      "titulo": "Moqueca de Peixe",
+      "tipo": "Brasileira",
+      "ingredientes": "1kg de postas de peixe (badejo ou cação), Leite de coco, Azeite de dendê, Pimentões coloridos, Tomate e cebola em rodelas, Coentro",
+      "preparo": "Tempere o peixe com limão e sal. Em uma panela de barro, faça camadas com os legumes e o peixe. Regue com leite de coco e dendê. Cozinhe em fogo baixo sem mexer por 20 minutos.",
+      "nota": "3",
+      "favorito": false
+    },
+    {
+      "id": "8",
+      "titulo": "Costelinha BBQ",
+      "tipo": "Americana",
+      "ingredientes": "1 peça de costela suína, Molho barbecue, Papel alumínio, Sal grosso, Pimenta do reino",
+      "preparo": "Tempere a costela com sal e pimenta. Envolva em papel alumínio e asse em fogo baixo por 2 horas. Retire o papel, pincele o molho barbecue e volte ao forno alto para caramelizar por 15 minutos.",
+      "nota": "5",
+      "favorito": true
+    },
+    {
+      "id": "9",
+      "titulo": "Ratatouille",
+      "tipo": "Francesa",
+      "ingredientes": "1 beringela, 1 abobrinha, 2 tomates, 1 pimentão amarelo, Azeite de oliva, Ervas de provence, Alho picado",
+      "preparo": "Corte todos os legumes em rodelas finas. Em uma travessa, intercale as rodelas formando um espiral colorido. Regue com azeite, alho e ervas. Cubra com papel manteiga e asse até ficarem macios.",
+      "nota": "4",
+      "favorito": false
+    },
+    {
+      "id": "10",
+      "titulo": "Lasanha à Bolonhesa",
+      "tipo": "Italiana",
+      "ingredientes": "Massa de lasanha, 500g de carne moída, Molho de tomate, Molho branco (béchamel), Queijo mussarela, Presunto, Queijo parmesão ralado",
+      "preparo": "Refogue a carne com o molho de tomate. Em uma travessa, alterne camadas de molho bolonhesa, massa, presunto, queijo e molho branco. Finalize com parmesão e gratine no forno.",
+      "nota": "5",
+      "favorito": true
+    },
+    {
+      "id": "11",
+      "titulo": "Coxinha de Frango",
+      "tipo": "Brasileira",
+      "ingredientes": "Massa (trigo e caldo de frango), Peito de frango desfiado e temperado, Catupiry, Farinha de rosca para empanar, Óleo para fritar",
+      "preparo": "Cozinhe a massa no caldo do frango até desgrudar da panela. Recheie com o frango e catupiry, modelando em formato de gota. Passe na água gelada e na farinha de rosca. Frite em óleo quente.",
+      "nota": "5",
+      "favorito": true
+    },
+    {
+      "id": "12",
+      "titulo": "Temaki de Salmão",
+      "tipo": "Japonesa",
+      "ingredientes": "Alga nori, Arroz japonês (shari), Salmão fresco em cubos, Cebolinha picada, Cream cheese, Gergelim",
+      "preparo": "Corte a alga ao meio. Coloque o arroz no canto esquerdo. Adicione o salmão misturado com cream cheese e cebolinha. Enrole em formato de cone e feche a ponta com um grão de arroz esmagado.",
+      "nota": "4",
+      "favorito": false
+    },
+    {
+      "id": "13",
+      "titulo": "Pão de Queijo Mineiro",
+      "tipo": "Brasileira",
+      "ingredientes": "500g de polvilho azedo, 1 copo de leite, 1/2 copo de óleo, 2 ovos, 300g de queijo meia cura ralado, Sal a gosto",
+      "preparo": "Ferva o leite com o óleo e escalde o polvilho. Espere esfriar um pouco. Adicione os ovos e o queijo, sovando bem. Faça bolinhas e asse em forno médio até dourarem.",
+      "nota": "5",
+      "favorito": true
+    },
+    {
+      "id": "14",
+      "titulo": "Brownie de Chocolate",
+      "tipo": "Americana",
+      "ingredientes": "200g de chocolate meio amargo, 100g de manteiga, 1 xícara de açúcar, 2 ovos, 1/2 xícara de farinha de trigo, Nozes picadas (opcional)",
+      "preparo": "Derreta o chocolate com a manteiga. Bata os ovos com o açúcar e misture ao chocolate. Adicione a farinha peneirada. Asse em forma untada por 20 a 25 minutos (deve formar casquinha em cima e ficar úmido dentro).",
+      "nota": "4",
+      "favorito": false
+    },
+    {
+      "id": "15",
+      "titulo": "Pudim de Leite",
+      "tipo": "Brasileira",
+      "ingredientes": "1 lata de leite condensado, 2 medidas (da lata) de leite, 3 ovos, 1 xícara de açúcar para a calda",
+      "preparo": "Derreta o açúcar na própria forma de pudim até virar caramelo. Bata os outros ingredientes no liquidificador. Despeje na forma. Cubra com papel alumínio e asse em banho-maria no forno médio por 1h30. Leve à geladeira antes de desenformar.",
+      "nota": "5",
+      "favorito": true
+    },
+    {
+      "id": "0a89",
+      "titulo": "Testeeeee",
+      "tipo": "Brasileira",
+      "nota": "1",
+      "ingredientes": "pipipipipipip",
+      "preparo": "popopopopopo",
+      "favorito": true
+    },
+    {
+      "id": "a8bc",
+      "titulo": "Cookies de chocolate",
+      "tipo": "Brasileira",
+      "nota": "4",
+      "ingredientes": "pipipipipipipipi",
+      "preparo": "popopopopopopopopo"
+    }
+  ]
+}
