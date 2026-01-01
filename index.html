@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CookBook</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="js/main.js"></script>
+
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <header id="cabecalho">
+        <nav class="navbar py-3" id="cabecalho__nav">
+            <div class="container-fluid d-flex justify-content-between align-items-center">
+                <a class="navbar-brand ms-2 ms-md-5 fs-4 fs-md-2" id="navbar-titulo">
+                    <strong>Cook</strong>Book <i class="bi bi-journal-bookmark-fill"></i>
+                </a>
+
+                <button
+                    class="btn btn-warning me-2 me-md-5 fs-6 fs-md-4 fw-bold shadow-sm d-flex align-items-center gap-2"
+                    type="button" id="novaReceitaBtn" data-bs-toggle="modal" data-bs-target="#modalReceita">
+                    <span>Nova Receita</span>
+                </button>
+
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-5">
+
+        <section class="row g-3 align-items-center mb-5 p-4 bg-white rounded-4 shadow-sm" id="formulario">
+
+            <div class="col-md-9">
+                <label for="inputBusca" class="form-label visually-hidden">Buscar</label>
+                <div class="input-group">
+                    <span class="input-group-text bg-white border-end-0">
+                        <i class="bi bi-search text-muted"></i>
+                    </span>
+                    <input type="text" class="form-control border-start-0 ps-0" id="inputBusca"
+                        placeholder="O que vamos cozinhar hoje?">
+                </div>
+            </div>
+
+            <div class="col-md-3 d-grid">
+                <input type="checkbox" class="btn-check" id="filtroFavoritos" autocomplete="off">
+                <label class="btn btn-outline-danger" for="filtroFavoritos">
+                    <i class="bi bi-heart-fill"></i> Ver Favoritos
+                </label>
+            </div>
+        </section>
+
+        <section>
+
+            <ul id="listaReceitas" class="row g-4 list-unstyled p-0">
+
+
+
+            </ul>
+
+        </section>
+
+    </main>
+
+    <footer class="bg-dark text-light pt-5 pb-4 mt-auto">
+        <div class="container text-center text-md-start">
+
+            <div class="row">
+
+                <div class="col-md-6 mx-auto mt-3">
+                    <h5 class="mb-4 fw-bold text-warning">
+                        CookBook <i class="bi bi-journal-bookmark-fill me-2"></i>
+                    </h5>
+                    <p>
+                        O seu lugar para organizar, criar e compartilhar as melhores memórias da cozinha.
+                    </p>
+                </div>
+
+                <div class="col-md-6 mx-auto mt-3 text-md-end">
+                    <h5 class="text-uppercase mb-4 fw-bold text-warning">Navegação</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <a href="#" class="text-white text-decoration-none hover-effect">Home</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#" class="text-white text-decoration-none hover-effect">Minhas Receitas</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#" class="text-white text-decoration-none hover-effect">Favoritos</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <hr class="mb-4 border-secondary">
+
+            <div class="row align-items-center">
+
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="small mb-0">© 2025 <strong>CookBook</strong>. Todos os direitos reservados.</p>
+                </div>
+
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="small mb-0">
+                        Desenvolvido por <a href="https://github.com/AlanAmaral4" target="_blank"
+                            class="text-warning text-decoration-none fw-bold">Alan Carlos do Amaral Costa</a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
+    <div class="modal fade" id="modalReceita" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-warning border-0">
+                    <h5 class="modal-title fw-bold" id="modalTitulo">Nova Receita</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+
+                    <form id="formReceita">
+                        <input type="hidden" id="idReceita">
+                        <div class="mb-3">
+                            <label for="titulo" class="form-label fw-bold">Nome da Receita</label>
+                            <input type="text" class="form-control" id="titulo" required
+                                placeholder="Ex: Lasanha Bolonhesa">
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="tipo" class="form-label fw-bold">Tipo de Culinária</label>
+                                <select class="form-select" id="tipo" required>
+                                    <option value="" selected disabled>Selecione...</option>
+                                    <option value="Brasileira">Brasileira</option>
+                                    <option value="Italiana">Italiana</option>
+                                    <option value="Francesa">Francesa</option>
+                                    <option value="Japonesa">Japonesa</option>
+                                    <option value="Americana">Norte Americana</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="nota" class="form-label fw-bold">Sua Avaliação (0 a 5)</label>
+                                <input type="number" class="form-control" id="nota" min="0" max="5" value="0">
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="ingredientes" class="form-label fw-bold">Ingredientes</label>
+                            <textarea class="form-control" id="ingredientes" required rows="3"
+                                placeholder="Liste os itens separados por vírgula..."></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="preparo" class="form-label fw-bold">Modo de Preparo</label>
+                            <textarea class="form-control" id="preparo" required rows="4"
+                                placeholder="Descreva o passo a passo..."></textarea>
+                        </div>
+
+                        <div class="d-flex justify-content-end gap-2 mt-3">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="btnCancelar">
+                                Cancelar
+                            </button>
+                            <button type="submit" class="btn btn-success px-4" id="btnSalvar">
+                                Salvar Receita
+                            </button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalVisualizar" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-0 shadow">
+
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title fw-bold" id="visualizarTitulo">
+                        ...
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body p-4">
+
+                    <div class="d-flex gap-2 mb-4">
+                        <span class="badge bg-warning text-dark fs-6" id="visualizarTipo">...</span>
+                        <span class="badge bg-light text-dark border fs-6" id="visualizarNota">
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <span id="visualizarSpan">...</span>
+                        </span>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-5 border-end">
+                            <h6 class="fw-bold text-uppercase text-muted mb-3">
+                                <i class="bi bi-basket-fill me-1"></i> Ingredientes
+                            </h6>
+                            <ul class="list-group list-group-flush" id="visualizarIngredientes">
+                                <li class="list-group-item">Carregando...</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-md-7 ps-md-4 mt-4 mt-md-0">
+                            <h6 class="fw-bold text-uppercase text-muted mb-3">
+                                <i class="bi bi-fire me-1"></i> Modo de Preparo
+                            </h6>
+                            <p class="text-secondary" id="visualizarPreparo"
+                                style="white-space: pre-line; text-align: justify;">
+                                Carregando...
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-outline-secondary px-4" data-bs-dismiss="modal">
+                        Fechar
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
